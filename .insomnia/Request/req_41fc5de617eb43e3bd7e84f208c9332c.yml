@@ -1,0 +1,21 @@
+_id: req_41fc5de617eb43e3bd7e84f208c9332c
+type: Request
+parentId: fld_c3c2844b9f3c41449fb2e5325bc1199a
+modified: 1668262104396
+created: 1668262086918
+url: ""
+name: Create Service
+description: ""
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication: {}
+metaSortKey: -1668262086918
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

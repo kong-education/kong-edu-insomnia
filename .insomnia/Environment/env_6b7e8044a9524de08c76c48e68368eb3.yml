@@ -1,0 +1,16 @@
+_id: env_6b7e8044a9524de08c76c48e68368eb3
+type: Environment
+parentId: env_de53511001dd5ce1c6f6daf80afcde46419edfd8
+modified: 1668261792504
+created: 1668261728553
+name: Gateway
+data:
+  scheme: http
+  GatewayAPI: 54.173.124.58:8001
+dataPropertyOrder:
+  "&":
+    - scheme
+    - GatewayAPI
+color: null
+isPrivate: false
+metaSortKey: 1667398633545

@@ -1,0 +1,20 @@
+_id: env_105a7216661041b8a598a05eb7a6ec79
+type: Environment
+parentId: env_de53511001dd5ce1c6f6daf80afcde46419edfd8
+modified: 1668426759631
+created: 1667495788889
+name: LocalApp
+data:
+  scheme: http
+  base_path: /api/v1
+  host: 54.172.144.198:8181
+  id: 143aadce-f995-4503-ba6e-01ed01c6af88
+dataPropertyOrder:
+  "&":
+    - scheme
+    - base_path
+    - host
+    - id
+color: null
+isPrivate: false
+metaSortKey: 1667398633495

@@ -1,0 +1,30 @@
+_id: req_wrk_154ea4f007644f2ea5c8f095f4fd8baa23ac4fbb
+type: Request
+parentId: fld_d27d3f8b588c4e56b336832453f20a80
+modified: 1668262073518
+created: 1667470994512
+url: "{{ base_url }}/transactions/{{ id }}"
+name: /transactions/{id}
+description: ""
+method: DELETE
+body: {}
+parameters: []
+headers:
+  - name: apikey
+    disabled: false
+    value: "{{ apikey }}"
+authentication:
+  type: bearer
+  key: apikey
+  value: "{{ apikey }}"
+  addTo: header
+  token: "{{bearerToken}}"
+  prefix: ""
+metaSortKey: -1667398633334
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

@@ -1,0 +1,32 @@
+_id: req_wrk_154ea4f007644f2ea5c8f095f4fd8baa3f872409
+type: Request
+parentId: fld_d27d3f8b588c4e56b336832453f20a80
+modified: 1668262082343
+created: 1667398633390
+url: "{{ base_url }}/transactions"
+name: /transactions
+description: ""
+method: POST
+body:
+  mimeType: application/json; charset=utf-8
+parameters: []
+headers:
+  - name: apikey
+    disabled: false
+    value: "{{ apikey }}"
+    id: pair_0e55ff353662439ebe4eae57081407f7
+authentication:
+  type: bearer
+  key: apikey
+  value: "{{ apikey }}"
+  addTo: header
+  token: "{{bearerToken}}"
+  prefix: ""
+metaSortKey: -1667398633184
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

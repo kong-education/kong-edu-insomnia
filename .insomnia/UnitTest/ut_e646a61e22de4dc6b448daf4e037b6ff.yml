@@ -1,0 +1,10 @@
+_id: ut_e646a61e22de4dc6b448daf4e037b6ff
+type: UnitTest
+parentId: uts_145cb503a436480e8f255a0804f357cd
+modified: 1670494808406
+created: 1670494679461
+requestId: req_wrk_154ea4f007644f2ea5c8f095f4fd8baabac61fd8
+name: PATCH-Returns 200
+code: |-
+  const response1 = await insomnia.send();
+  expect(response1.status).to.equal(200);
