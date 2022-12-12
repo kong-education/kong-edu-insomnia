@@ -1,0 +1,5 @@
+172.24.0.1 - - [09/Dec/2022:17:23:02 +0000] "GET //transactions HTTP/1.1" 404 48 "-" "insomnia/2022.7.0-beta.6"
+172.24.0.1 - - [09/Dec/2022:17:23:22 +0000] "GET //transactions HTTP/1.1" 404 48 "-" "curl/7.79.1"
+172.24.0.1 - - [09/Dec/2022:17:23:35 +0000] "GET /transactions HTTP/1.1" 404 48 "-" "curl/7.79.1"
+172.24.0.1 - - [09/Dec/2022:17:24:41 +0000] "GET /transactions HTTP/1.1" 200 517 "-" "curl/7.79.1"
+172.24.0.1 - - [09/Dec/2022:17:25:09 +0000] "GET //transactions HTTP/1.1" 200 517 "-" "insomnia/2022.7.0-beta.6"

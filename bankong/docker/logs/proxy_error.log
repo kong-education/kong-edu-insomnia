@@ -1,0 +1,64 @@
+2022/12/09 17:21:59 [warn] 1#0: [kong] init.lua:395 the Granular tracing is deprecated, please use OpenTelemetry tracing to track the lifecycle of Kong instead. (deprecated after 3.0.0.0, scheduled for removal in 4.0.0.0)
+2022/12/09 17:21:59 [warn] 1#0: [kong] [C]:-1 [Penlight 1.13.1] the contents of module 'pl.xml' has been deprecated, please use a more specialized library instead (deprecated after 1.11.0, scheduled for removal in 2.0.0)
+2022/12/09 17:22:06 [warn] 1#0: [kong] init.lua:395 the Granular tracing is deprecated, please use OpenTelemetry tracing to track the lifecycle of Kong instead. (deprecated after 3.0.0.0, scheduled for removal in 4.0.0.0)
+2022/12/09 17:22:06 [warn] 1#0: [kong] [C]:-1 [Penlight 1.13.1] the contents of module 'pl.xml' has been deprecated, please use a more specialized library instead (deprecated after 1.11.0, scheduled for removal in 2.0.0)
+2022/12/09 17:22:06 [notice] 1#0: using the "epoll" event method
+2022/12/09 17:22:06 [notice] 1#0: openresty/1.21.4.1
+2022/12/09 17:22:06 [notice] 1#0: built by gcc 7.5.0 (Ubuntu 7.5.0-3ubuntu1~18.04) 
+2022/12/09 17:22:06 [notice] 1#0: OS: Linux 5.15.49-linuxkit
+2022/12/09 17:22:06 [notice] 1#0: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2022/12/09 17:22:06 [notice] 1#0: start worker processes
+2022/12/09 17:22:06 [notice] 1#0: start worker process 2181
+2022/12/09 17:22:07 [notice] 2181#0: *1 [lua] init.lua:253: purge(): [DB cache] purging (local) cache, context: init_worker_by_lua*
+2022/12/09 17:22:07 [notice] 2181#0: *1 [lua] init.lua:253: purge(): [DB cache] purging (local) cache, context: init_worker_by_lua*
+2022/12/09 17:22:07 [notice] 2181#0: *1 [lua] init.lua:415: every(): [timer-ng] fallback to ngx.timer.every [interval = 86400], context: init_worker_by_lua*
+2022/12/09 17:22:07 [notice] 2181#0: *2 stream [lua] init.lua:415: every(): [timer-ng] fallback to ngx.timer.every [interval = 86400], context: init_worker_by_lua*
+2022/12/09 17:22:07 [notice] 2181#0: *9 stream [lua] init.lua:393: timer_at(): [timer-ng] fallback to ngx.timer.at [delay = 86400], context: ngx.timer
+2022/12/09 17:22:07 [notice] 2181#0: *156 [lua] init.lua:393: timer_at(): [timer-ng] fallback to ngx.timer.at [delay = 86400], context: ngx.timer
+2022/12/09 17:22:09 [notice] 2181#0: *157 [lua] negotiation.lua:143: log_negotiation_result(): service accepted: "config", version: v1, description: The configuration synchronizing service. (JSON and Gzip), context: ngx.timer
+2022/12/09 17:22:10 [notice] 2181#0: *157 [lua] init.lua:253: purge(): [DB cache] purging (local) cache, context: ngx.timer
+2022/12/09 17:22:10 [notice] 2181#0: *157 [lua] init.lua:253: purge(): [DB cache] purging (local) cache, context: ngx.timer
+2022/12/09 17:22:10 [notice] 2181#0: *4 stream [lua] init.lua:253: purge(): [DB cache] purging (local) cache, context: ngx.timer
+2022/12/09 17:22:10 [notice] 2181#0: *4 stream [lua] init.lua:253: purge(): [DB cache] purging (local) cache, context: ngx.timer
+2022/12/09 17:22:10 [notice] 2181#0: *150 [lua] init.lua:253: purge(): [DB cache] purging (local) cache, context: ngx.timer
+2022/12/09 17:22:10 [notice] 2181#0: *150 [lua] init.lua:253: purge(): [DB cache] purging (local) cache, context: ngx.timer
+2022/12/09 17:24:35 [notice] 2181#0: *157 [lua] init.lua:253: purge(): [DB cache] purging (local) cache, context: ngx.timer
+2022/12/09 17:24:35 [notice] 2181#0: *157 [lua] init.lua:253: purge(): [DB cache] purging (local) cache, context: ngx.timer
+2022/12/09 17:24:35 [notice] 2181#0: *150 [lua] init.lua:253: purge(): [DB cache] purging (local) cache, context: ngx.timer
+2022/12/09 17:24:35 [notice] 2181#0: *150 [lua] init.lua:253: purge(): [DB cache] purging (local) cache, context: ngx.timer
+2022/12/09 17:24:35 [notice] 2181#0: *4 stream [lua] init.lua:253: purge(): [DB cache] purging (local) cache, context: ngx.timer
+2022/12/09 17:24:35 [notice] 2181#0: *4 stream [lua] init.lua:253: purge(): [DB cache] purging (local) cache, context: ngx.timer
+2022/12/09 18:30:34 [error] 2181#0: *152 [lua] init.lua:214: error while receiving frame from peer: failed to receive the first 2 bytes: timeout, context: ngx.timer
+2022/12/09 19:20:07 [error] 2181#0: *715 [lua] init.lua:214: error while receiving frame from peer: failed to receive the first 2 bytes: timeout, context: ngx.timer
+2022/12/09 20:01:13 [error] 2181#0: *672 [lua] init.lua:214: error while receiving frame from peer: failed to receive the first 2 bytes: timeout, context: ngx.timer
+2022/12/09 22:52:35 [error] 2181#0: *873 [lua] init.lua:214: error while receiving frame from peer: failed to receive the first 2 bytes: timeout, context: ngx.timer
+2022/12/10 10:36:05 [error] 2181#0: *966 [lua] init.lua:214: error while receiving frame from peer: failed to receive the first 2 bytes: timeout, context: ngx.timer
+2022/12/10 11:43:17 [error] 2181#0: *959 [lua] init.lua:214: error while receiving frame from peer: failed to receive the first 2 bytes: timeout, context: ngx.timer
+2022/12/10 11:58:24 [error] 2181#0: *1037 [lua] init.lua:214: error while receiving frame from peer: failed to receive the first 2 bytes: timeout, context: ngx.timer
+2022/12/10 15:19:32 [error] 2181#0: *1033 [lua] init.lua:214: error while receiving frame from peer: failed to receive the first 2 bytes: timeout, context: ngx.timer
+2022/12/10 19:15:45 [error] 2181#0: *1250 [lua] init.lua:214: error while receiving frame from peer: failed to receive the first 2 bytes: timeout, context: ngx.timer
+2022/12/10 19:15:47 [notice] 2181#0: *1459 stream [lua] init.lua:393: timer_at(): [timer-ng] fallback to ngx.timer.at [delay = 86400], context: ngx.timer
+2022/12/10 19:15:47 [notice] 2181#0: *1460 [lua] init.lua:393: timer_at(): [timer-ng] fallback to ngx.timer.at [delay = 86400], context: ngx.timer
+2022/12/10 19:47:02 [error] 2181#0: *1431 [lua] init.lua:214: error while receiving frame from peer: failed to receive the first 2 bytes: timeout, context: ngx.timer
+2022/12/10 20:03:23 [error] 2181#0: *1620 [lua] init.lua:214: error while receiving frame from peer: failed to receive the first 2 bytes: timeout, context: ngx.timer
+2022/12/11 17:22:38 [error] 2181#0: *1632 [lua] init.lua:214: error while receiving frame from peer: failed to receive the first 2 bytes: timeout, context: ngx.timer
+2022/12/11 19:49:39 [error] 2181#0: *1769 [lua] init.lua:214: error while receiving frame from peer: failed to receive the first 2 bytes: timeout, context: ngx.timer
+2022/12/11 19:49:38 [notice] 2181#0: *2060 stream [lua] init.lua:393: timer_at(): [timer-ng] fallback to ngx.timer.at [delay = 86400], context: ngx.timer
+2022/12/11 19:49:38 [notice] 2181#0: *2061 [lua] init.lua:393: timer_at(): [timer-ng] fallback to ngx.timer.at [delay = 86400], context: ngx.timer
+2022/12/11 20:35:16 [notice] 2181#0: signal 15 (SIGTERM) received, exiting
+2022/12/12 09:39:16 [warn] 1#0: [kong] init.lua:395 the Granular tracing is deprecated, please use OpenTelemetry tracing to track the lifecycle of Kong instead. (deprecated after 3.0.0.0, scheduled for removal in 4.0.0.0)
+2022/12/12 09:39:16 [warn] 1#0: [kong] [C]:-1 [Penlight 1.13.1] the contents of module 'pl.xml' has been deprecated, please use a more specialized library instead (deprecated after 1.11.0, scheduled for removal in 2.0.0)
+2022/12/12 09:39:23 [warn] 1#0: [kong] init.lua:395 the Granular tracing is deprecated, please use OpenTelemetry tracing to track the lifecycle of Kong instead. (deprecated after 3.0.0.0, scheduled for removal in 4.0.0.0)
+2022/12/12 09:39:23 [warn] 1#0: [kong] [C]:-1 [Penlight 1.13.1] the contents of module 'pl.xml' has been deprecated, please use a more specialized library instead (deprecated after 1.11.0, scheduled for removal in 2.0.0)
+2022/12/12 09:39:23 [notice] 1#0: using the "epoll" event method
+2022/12/12 09:39:23 [notice] 1#0: openresty/1.21.4.1
+2022/12/12 09:39:23 [notice] 1#0: built by gcc 7.5.0 (Ubuntu 7.5.0-3ubuntu1~18.04) 
+2022/12/12 09:39:23 [notice] 1#0: OS: Linux 5.15.49-linuxkit
+2022/12/12 09:39:23 [notice] 1#0: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2022/12/12 09:39:23 [notice] 1#0: start worker processes
+2022/12/12 09:39:23 [notice] 1#0: start worker process 2181
+2022/12/12 09:39:24 [notice] 2181#0: *1 [lua] init.lua:415: every(): [timer-ng] fallback to ngx.timer.every [interval = 86400], context: init_worker_by_lua*
+2022/12/12 09:39:24 [notice] 2181#0: *2 stream [lua] init.lua:415: every(): [timer-ng] fallback to ngx.timer.every [interval = 86400], context: init_worker_by_lua*
+2022/12/12 09:39:24 [notice] 2181#0: *8 stream [lua] init.lua:393: timer_at(): [timer-ng] fallback to ngx.timer.at [delay = 86400], context: ngx.timer
+2022/12/12 09:39:24 [notice] 2181#0: *155 [lua] init.lua:393: timer_at(): [timer-ng] fallback to ngx.timer.at [delay = 86400], context: ngx.timer
+2022/12/12 09:39:25 [notice] 2181#0: *156 [lua] negotiation.lua:143: log_negotiation_result(): service accepted: "config", version: v1, description: The configuration synchronizing service. (JSON and Gzip), context: ngx.timer

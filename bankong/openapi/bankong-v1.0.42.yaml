@@ -9,14 +9,14 @@ info:
   
     :bulb: this API is rate limited
 servers: 
+  - url: http://localhost:3000/
+    description: local sandbox environment  
 #   - url: http://bankong.service-connectivity.com/api/v1/
 #     description: production on multi-zone-mesh system
 #   - url: http://backend-transactions.bankong/api/v1/
 #     description: Lab environment
-#   - url: http://localhost:3000/api/v1/
-#     description: local sandbox environment  
-  - url: http://backend-transactions.bankong:3000/api/v1/
-    description: local sandbox environment  
+  # - url: http://backend-transactions.bankong:3000/api/v1/
+  #   description: local sandbox environment  
   
 security:
   - ApiKeyAuth: [] 
@@ -26,6 +26,7 @@ paths:
   /transactions:
     get:
       description: Lists all transactions
+      summary: List all transactions
       tags: ["Transactions"]
       operationId: "listTranactions"
       responses:
@@ -37,8 +38,9 @@ paths:
                 $ref: "#/components/schemas/TransactionsList"
     post:
       description: Initiate a transaction
+      summary: Create new transaction
       tags: ["Transactions"]
-      operationId: "initiate a a tranaction"
+      operationId: "initiateTransaction"
       requestBody:
         content:
           application/json; charset=utf-8:
@@ -55,6 +57,7 @@ paths:
   /transactions/{id}:
     get:
       description: Returns a post by id
+      summary: Get specific transaction
       tags: ["Transactions"]
       operationId: "getTransaction"
       parameters:
@@ -75,6 +78,7 @@ paths:
           description: Transaction not found
     #  patch:
     #   description: Change a transaction
+    #   summary: Update a transaction
     #   tags: ["Transactions"]
     #   operationId: "changeTransaction"
     #   requestBody:
@@ -100,6 +104,7 @@ paths:
     #       description: Transaction not found
     delete:
       description: Cancel a transaction
+      summary: Cancel a transaction
       tags: ["Transactions"]
       operationId: "cancelTransaction"
       parameters:

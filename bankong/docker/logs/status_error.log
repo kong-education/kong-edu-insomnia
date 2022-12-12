@@ -1,0 +1,2 @@
+2022/12/09 18:30:27 [notice] 2174#0: *1082 [kong] vault.lua:468 cannot automatically rotate secrets in absence of options["$refs"], client: 172.24.0.11, server: kong_status, request: "GET /metrics HTTP/1.1", host: "kong-cp:8100"
+2022/12/09 18:30:27 [error] 2174#0: *1082 [kong] exporter.lua:360 prometheus: failed to reach database while processing/metrics endpoint: receive_message: failed to get type: timeout, client: 172.24.0.11, server: kong_status, request: "GET /metrics HTTP/1.1", host: "kong-cp:8100"
