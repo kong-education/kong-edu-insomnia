@@ -28,4 +28,4 @@ jobs:
       - name: Deploy declarative config
         run: deck sync --workspace workspace01 --select-tag inso-generated --kong-addr http://localhost:8001
       - name: Publish Spec to Dev Portal
-        run: cd ././openapi && http --check-status --ignore-stdin PUT http://localhost:8001/workspace01/files/specs/bankong.yaml contents=@./openapi/bankong.yaml
+        run: cd ././openapi && http --check-status --ignore-stdin PUT http://localhost:8001/workspace01/files/specs/bankong.yaml contents=@bankong.yaml
