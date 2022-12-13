@@ -1,0 +1,20 @@
+name: Action on Pull Request to generate Kong Config from Spec and Validate it
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  deploy_to_kong:
+    runs-on: self-hosted
+    name: Generate Kong config from Spec and Validate config
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Generate OAS spec from insomnia
+        run: inso export spec spc_214285 -o ./openapi/stock.yaml
+      - name: Generate Kong declarative configuration from Spec
+        run: inso generate config ./openapi/stock.yaml --tags team3 --type declarative > kong.yaml
+      - name: Validate Kong declarative configuration
+        run: deck validate
