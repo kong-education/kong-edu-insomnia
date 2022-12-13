@@ -27,5 +27,5 @@ jobs:
         run: deck validate
       - name: Deploy declarative config
         run: deck sync --workspace workspace01 --select-tag inso-generated --kong-addr http://localhost:8001
-      # - name: Publish Spec to Dev Portal
-      #   run: cd ././openapi && http --check-status --ignore-stdin PUT http://localhost:8001/BCP/files/specs/stock.yaml contents=@stock.yaml
+      - name: Publish Spec to Dev Portal
+        run: cd ././openapi && http --check-status --ignore-stdin PUT http://localhost:8001/BCP/files/specs/stock.yaml contents=@stock.yaml
