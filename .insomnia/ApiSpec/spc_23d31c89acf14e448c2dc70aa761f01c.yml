@@ -1,9 +1,9 @@
 _id: spc_23d31c89acf14e448c2dc70aa761f01c
 type: ApiSpec
 parentId: wrk_154ea4f007644f2ea5c8f095f4fd8baa
-modified: 1695980293763
+modified: 1695980658379
 created: 1667398652421
-fileName: Transactions API of BanKonG
+fileName: Transactions API of BanKonG 1.0.6
 contents: >-
   openapi: 3.0.2
 
@@ -30,10 +30,12 @@ contents: >-
     - url: http://backend-transactions.bankong:3000/api/v1
       description: local testing environment
 
+
     
   security:
     - ApiKeyAuth: [] 
     - OIDC: []
+
 
     
   tags:
@@ -42,6 +44,7 @@ contents: >-
     description: Everything about transactions
     externalDocs:
       url: http://docs.bankong.com/transations
+
 
     
   paths:
