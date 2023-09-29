@@ -1,0 +1,31 @@
+rules:
+  bankong-tags:
+    description: Tags must have a description.
+    given: $.tags[*]
+    severity: error
+    then:
+      field: description
+      function: truthy
+  
+  bankong-request-no-PATCH:
+    description: "No PATCH requests permitted"
+    severity: error
+    given: $.paths.*.[patch]
+    then:
+      function: falsy
+  
+  bankong-request-GET-no-body:
+    description: "A 'GET' request MUST NOT accept a 'body` parameter"
+    severity: error
+    given: $.paths..get.parameters..in
+    then:
+      function: pattern
+      functionOptions:
+        notMatch: "/^body$/"
+
+  bankong-security-enabled:
+    description: "keyAuth security Scheme Required"
+    severity: error
+    given: $.components.securitySchemes[*]
+    then:
+      function: truthy

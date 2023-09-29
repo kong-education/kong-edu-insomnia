@@ -1,0 +1,8 @@
+{
+	"scheme": "http",
+	"base_path": "",
+	"host": "localhost:3000",
+	"apikey": "apikey",
+	"bearerToken": "bearerToken",
+	"base_url": "{{ _.host }}"
+}
