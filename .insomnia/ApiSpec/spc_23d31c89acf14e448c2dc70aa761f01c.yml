@@ -1,7 +1,7 @@
 _id: spc_23d31c89acf14e448c2dc70aa761f01c
 type: ApiSpec
 parentId: wrk_154ea4f007644f2ea5c8f095f4fd8baa
-modified: 1695979939595
+modified: 1695980788465
 created: 1667398652421
 fileName: Transactions API of BanKonG 1.0.5
 contents: >+
@@ -30,10 +30,12 @@ contents: >+
     #   description: local testing environment  
 
 
+
     
   security:
     - ApiKeyAuth: [] 
     - OIDC: []
+
 
 
     
