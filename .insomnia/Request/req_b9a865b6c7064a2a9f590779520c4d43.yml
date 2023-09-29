@@ -1,0 +1,38 @@
+_id: req_b9a865b6c7064a2a9f590779520c4d43
+type: Request
+parentId: fld_ea5d3833d6074de3b6c69e1dee40281e
+modified: 1695984611145
+created: 1695981645713
+url: "{{ _.base_url }}/transactions"
+name: Create new transaction
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "source": "GR872659435350353",
+      "senderName": "Max Mustermann",
+      "destination": "DE8412325587359375895",
+      "amount": 42,
+      "currency": "EUR",
+      "subject": "Invoice #42-08/15"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    disabled: false
+    value: application/json
+authentication:
+  type: apikey
+  key: apikey
+  value: "{{ _.apikey }}"
+  addTo: header
+metaSortKey: -1695981645713
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

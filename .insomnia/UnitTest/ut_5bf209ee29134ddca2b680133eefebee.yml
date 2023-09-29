@@ -1,0 +1,14 @@
+_id: ut_5bf209ee29134ddca2b680133eefebee
+type: UnitTest
+parentId: uts_b699ea1cf8ca40c682ea45fb5eaa79a9
+modified: 1695985389639
+created: 1695983222204
+requestId: req_1ce09e280f8a4cb2af0b9613a07b573b
+name: Create and Check Patch
+code: |-
+  const response1 = await insomnia.send();
+  expect(response1.status).to.equal(200);
+
+  const body = JSON.parse(response1.data);
+
+  expect(body.subject).to.contain("UPDATED from CREATE")

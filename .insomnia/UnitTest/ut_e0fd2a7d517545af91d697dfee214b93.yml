@@ -1,0 +1,17 @@
+_id: ut_e0fd2a7d517545af91d697dfee214b93
+type: UnitTest
+parentId: uts_b699ea1cf8ca40c682ea45fb5eaa79a9
+modified: 1695985451715
+created: 1695982970788
+requestId: req_8877e602bdc141f8b08483b751478093
+name: Get Correct Format
+code: >
+  const response1 = await insomnia.send();
+
+  expect(response1.status).to.equal(200);
+
+
+  const body = JSON.parse(response1.data);
+
+
+  expect(body).to.have.all.keys('source', 'senderName', 'destination', 'amount', 'currency', 'subject');

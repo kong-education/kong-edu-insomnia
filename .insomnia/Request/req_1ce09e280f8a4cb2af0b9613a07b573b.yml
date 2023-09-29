@@ -1,0 +1,39 @@
+_id: req_1ce09e280f8a4cb2af0b9613a07b573b
+type: Request
+parentId: fld_600d278e56b1441f988b5724aa5f9b94
+modified: 1695985432386
+created: 1695982165557
+url: "{{ _.base_url }}/transactions/{% response 'body',
+  'req_b9a865b6c7064a2a9f590779520c4d43', 'b64::JC5pZA==::46b', 'always', 60 %}"
+name: Create then Update transaction via ID
+description: ""
+method: PATCH
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "source": "GR872659435350353",
+      "senderName": "Max Mustermann",
+      "destination": "DE8412325587359375895",
+      "amount": 42,
+      "currency": "EUR",
+      "subject": "Invoice #42-08/15 - UPDATED"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    disabled: false
+    value: application/json
+authentication:
+  type: apikey
+  key: apikey
+  value: "{{ _.apikey }}"
+  addTo: header
+metaSortKey: -1695982168320
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

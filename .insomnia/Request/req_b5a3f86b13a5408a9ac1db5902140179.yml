@@ -1,0 +1,26 @@
+_id: req_b5a3f86b13a5408a9ac1db5902140179
+type: Request
+parentId: fld_600d278e56b1441f988b5724aa5f9b94
+modified: 1695985326726
+created: 1695985032747
+url: "{{ _.base_url }}/transactions/{% response 'body',
+  'req_b9a865b6c7064a2a9f590779520c4d43', 'b64::JC5pZA==::46b', 'always', 60 %}"
+name: Create and Get via ID
+description: ""
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication:
+  type: apikey
+  key: apikey
+  value: "{{ _.apikey }}"
+  addTo: header
+metaSortKey: -1695982168370
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

@@ -1,0 +1,26 @@
+_id: req_786841acf6334514a2698994a008ae3f
+type: Request
+parentId: fld_600d278e56b1441f988b5724aa5f9b94
+modified: 1695984478854
+created: 1695983479773
+url: "{{ _.base_url }}/transactions/{% response 'body',
+  'req_b9a865b6c7064a2a9f590779520c4d43', 'b64::JC5pZA==::46b', 'always', 60 %}"
+name: Create and Cancel a transaction via Create ID
+description: ""
+method: DELETE
+body: {}
+parameters: []
+headers: []
+authentication:
+  type: apikey
+  key: apikey
+  value: "{{ _.apikey }}"
+  addTo: header
+metaSortKey: -1695982168420
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

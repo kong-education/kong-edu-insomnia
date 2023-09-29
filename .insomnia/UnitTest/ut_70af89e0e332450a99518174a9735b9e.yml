@@ -1,0 +1,11 @@
+_id: ut_70af89e0e332450a99518174a9735b9e
+type: UnitTest
+parentId: uts_b699ea1cf8ca40c682ea45fb5eaa79a9
+modified: 1695985456835
+created: 1695982636239
+requestId: req_786841acf6334514a2698994a008ae3f
+name: Create and Cancel
+code: |-
+  //create a new transaction and retrieve $.id
+  const resp = await insomnia.send();
+  expect(resp.status).to.equal(200);

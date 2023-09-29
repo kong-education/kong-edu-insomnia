@@ -1,0 +1,23 @@
+_id: ut_cd0a96bf5f164930a4e6cb0fa3d232fb
+type: UnitTest
+parentId: uts_b699ea1cf8ca40c682ea45fb5eaa79a9
+modified: 1695985519894
+created: 1695982478730
+requestId: req_b5a3f86b13a5408a9ac1db5902140179
+name: Create with Get and GetAll
+code: |-
+  //create a new transaction and get via id then retrieve $.id
+  const resp = await insomnia.send();
+  expect(resp.status).to.equal(200);
+  const id = JSON.parse(resp.data).id;
+
+
+  //use ID to check within get all
+  const getAll= await insomnia.send('req_8083c15fae8a4f108d0f7b7e96afc109');
+  expect(getAll.status).to.equal(200);
+
+  const body = JSON.parse(getAll.data);
+  expect(body).to.be.an('array');
+
+  const newId = body.filter(function (el) {return el.id == id;});
+  expect(newId).to.have.length(1);
