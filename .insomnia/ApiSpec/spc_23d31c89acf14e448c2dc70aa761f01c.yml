@@ -1,14 +1,14 @@
 _id: spc_23d31c89acf14e448c2dc70aa761f01c
 type: ApiSpec
 parentId: wrk_154ea4f007644f2ea5c8f095f4fd8baa
-modified: 1670514099440
+modified: 1696254925464
 created: 1667398652421
 fileName: Transactions API of BanKonG
 contents: >+
   openapi: 3.0.2
 
   info:
-    version: 1.1.1
+    version: 1.0.42
     title: Transactions API of BanKonG
     description: | 
       This API provides you access to the transactions of a logged in user. You can get, create, change and delete transactions (of course always depending on permissions).
@@ -17,23 +17,29 @@ contents: >+
     
       :bulb: this API is rate limited
   servers: 
-    - url: http://localhost:3000/api/v1/
+    - url: http://localhost:3000/
       description: local sandbox environment  
   #   - url: http://bankong.service-connectivity.com/api/v1/
+
   #     description: production on multi-zone-mesh system
+
   #   - url: http://backend-transactions.bankong/api/v1/
+
   #     description: Lab environment
-  #   - url: http://backend-transactions.bankong:3000/api/v1/
-  #     description: local sandbox environment  
+    # - url: http://backend-transactions.bankong:3000/api/v1/
+    #   description: local sandbox environment  
+
     
-  # security:
-  #   - ApiKeyAuth: [] 
-  #   - OIDC: []
+  security:
+    - ApiKeyAuth: [] 
+    - OIDC: []
+
     
   paths:
     /transactions:
       get:
         description: Lists all transactions
+        summary: List all transactions
         tags: ["Transactions"]
         operationId: "listTranactions"
         responses:
@@ -45,8 +51,9 @@ contents: >+
                   $ref: "#/components/schemas/TransactionsList"
       post:
         description: Initiate a transaction
+        summary: Create new transaction
         tags: ["Transactions"]
-        operationId: "initiate a a tranaction"
+        operationId: "initiateTransaction"
         requestBody:
           content:
             application/json; charset=utf-8:
@@ -63,6 +70,7 @@ contents: >+
     /transactions/{id}:
       get:
         description: Returns a post by id
+        summary: Get specific transaction
         tags: ["Transactions"]
         operationId: "getTransaction"
         parameters:
@@ -81,33 +89,35 @@ contents: >+
                   $ref: "#/components/schemas/Transaction"
           "404":
             description: Transaction not found
-      patch:
-        description: Change a transaction
-        tags: ["Transactions"]
-        operationId: "changeTransaction"
-        requestBody:
-          content:
-            application/json; charset=utf-8:
-              schema:
-                $ref: "#/components/schemas/Transaction"
-        parameters:
-          - name: id
-            in: path
-            required: true
-            description: The transaction id.
-            schema:
-              $ref: "#/components/schemas/TransactionId"
-        responses:
-          "200":
-            description: Transaction changed
-            content:
-              "application/json":
-                schema:
-                  $ref: "#/components/schemas/Transaction"
-          "404":
-            description: Transaction not found
+      #  patch:
+      #   description: Change a transaction
+      #   summary: Update a transaction
+      #   tags: ["Transactions"]
+      #   operationId: "changeTransaction"
+      #   requestBody:
+      #     content:
+      #       application/json; charset=utf-8:
+      #         schema:
+      #           $ref: "#/components/schemas/Transaction"
+      #   parameters:
+      #     - name: id
+      #       in: path
+      #       required: true
+      #       description: The transaction id.
+      #       schema:
+      #         $ref: "#/components/schemas/TransactionId"
+      #   responses:
+      #     "200":
+      #       description: Transaction changed
+      #       content:
+      #         "application/json":
+      #           schema:
+      #             $ref: "#/components/schemas/Transaction"
+      #     "404":
+      #       description: Transaction not found
       delete:
         description: Cancel a transaction
+        summary: Cancel a transaction
         tags: ["Transactions"]
         operationId: "cancelTransaction"
         parameters:
@@ -143,7 +153,7 @@ contents: >+
           - "id"
           - "source"
           - "senderName"
-          - "destionation"
+          - "destination"
           - "amount"
           - "currency"
           - "subject"
@@ -190,3 +200,6 @@ contents: >+
         type: http
         scheme: bearer
         bearerFormat: JWT
+
+
+contentType: yaml
