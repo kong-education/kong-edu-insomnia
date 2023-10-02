@@ -37,12 +37,3 @@ services:
    container_name: bankong-backend-orders
    hostname: backend-orders.bankong
    restart: on-failure
-
-  httpbin:
-    container_name: httpbin
-    hostname: httpbin.docker.local
-    networks:
-    - kong-edu-net
-    image: kennethreitz/httpbin:latest
-    ports:
-    - 80:8080
