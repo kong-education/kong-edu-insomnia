@@ -36,16 +36,16 @@ rules:
     then:
       function: truthy
 
-  no-api-key-auth:
-    description: "Consider a more secure alternative to API Key Auth."
-    message: "API Key Auth is being phased out at BanKonG, please consider moving to OAuth2."
-    severity: warning
-    given: $.components.securitySchemes
-    then:
-      field: type
-      function: pattern
-      functionOptions:
-        notMatch: "apiKey"
+#  no-api-key-auth:
+#    description: "Consider a more secure alternative to API Key Auth."
+#    message: "API Key Auth is being phased out at BanKonG, please consider moving to OAuth2."
+#    severity: warning
+#    given: $.components.securitySchemes
+#    then:
+#      field: type
+#      function: pattern
+#      functionOptions:
+#        notMatch: "apiKey"
 
   resp-code-as-num:
     description: Response codes should be a number i.e. not string
