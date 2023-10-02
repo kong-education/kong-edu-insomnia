@@ -1,0 +1,58 @@
+formats: ["oas3"]
+
+documentationUrl: https://www.example.com/docs/api-style-guide.md
+
+extends: [[spectral:oas, all]]
+
+rules:
+  bankong-tags:
+    description: Tags must have a description.
+    given: $.tags[*]
+    severity: error
+    then:
+      field: description
+      function: truthy
+  
+  bankong-request-no-PATCH:
+    description: "No PATCH requests permitted"
+    severity: error
+    given: $.paths.*.[patch]
+    then:
+      function: falsy
+  
+  bankong-request-GET-no-body:
+    description: "A 'GET' request MUST NOT accept a 'body` parameter"
+    severity: error
+    given: $.paths..get.parameters..in
+    then:
+      function: pattern
+      functionOptions:
+        notMatch: "/^body$/"
+
+  bankong-security-enabled:
+    description: "keyAuth security Scheme Required"
+    severity: error
+    given: $.components.securitySchemes[*]
+    then:
+      function: truthy
+
+  no-api-key-auth:
+    description: "Consider a more secure alternative to API Key Auth."
+    message: "API Key Auth is being phased out at BanKonG, please consider moving to OAuth2."
+    severity: warning
+    given: $.components.securitySchemes
+    then:
+      field: type
+      function: pattern
+      functionOptions:
+        notMatch: "apiKey"
+
+  resp-code-as-num:
+    description: Response codes should be a number i.e. not string
+    severity: warn
+    given: "$....responses"
+    then:
+      field: "@key"
+      function: pattern
+      functionOptions:
+        match: "^[0-9]+$"
