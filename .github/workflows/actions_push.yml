@@ -1,0 +1,31 @@
+name: Apply generated configuration to local Kong gateway and update API documentation
+
+on:
+  push:
+    branches:
+      - master
+
+
+jobs:
+  deploy_to_kong:
+    runs-on: self-hosted
+    name: Apply generated configuration to local Kong gateway and update API documentation
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Generate OAS spec from insomnia
+        run: inso export spec spc_23d31c -o ./openapi/bankong.yaml
+      - name: Lint OAS spec 
+        run: inso lint spec spc_23d31c
+      - name: Generate Kong declarative configuration from Spec
+        run: inso generate config ./openapi/bankong.yaml --type declarative > kong-1.yaml
+      - name: Convert declarative file to v3 format
+        run: deck convert --from kong-gateway-2.x --input-file kong-1.yaml --output-file kong-2.yaml --to kong-gateway-3.x
+      - name: fix temporary regex issue
+        run: sed 's/\\//' kong-2.yaml > kong.yaml
+      - name: Validate Kong declarative configuration
+        run: deck validate
+      - name: Deploy declarative config
+        run: deck sync --workspace workspace01 --select-tag inso-generated --kong-addr http://localhost:8001
+      - name: Publish Spec to Dev Portal
+        run: cd ././openapi && http --check-status --ignore-stdin PUT http://localhost:8001/workspace01/files/specs/bankong.yaml contents=@bankong.yaml
