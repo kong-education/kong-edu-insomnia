@@ -29,21 +29,11 @@ contents: >+
     # - url: http://backend-transactions.bankong:3000/api/v1/
     #   description: local sandbox environment  
 
-<<<<<<< HEAD
-
-
-=======
->>>>>>> upstream/master
     
   security:
     - ApiKeyAuth: [] 
     - OIDC: []
 
-<<<<<<< HEAD
-
-
-=======
->>>>>>> upstream/master
     
   paths:
     /transactions:
