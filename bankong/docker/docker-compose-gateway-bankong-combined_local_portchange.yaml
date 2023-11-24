@@ -379,7 +379,7 @@ services:
    hostname: frontend.bankong
    restart: on-failure
    ports:
-    - 29080:80
+    - 29080:8080
   bankong-backend-transactions:
    networks:
    - kong-edu-net
